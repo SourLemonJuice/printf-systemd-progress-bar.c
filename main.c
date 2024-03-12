@@ -32,17 +32,18 @@ char *generate_random_string(int str_Long)
 
 int main()
 {
+  // 创建 nanosleep 需要的数据结构
   struct timespec ts;
 
   // 输出14行信息
   for (int i=1;i<=16;i++)
   {
-    // 休眠250毫秒
+    // 休眠 340-90 毫秒
     ts.tv_sec = 0;
     ts.tv_nsec = (rand() % (340000000 - 90000000) + 90000000);
     nanosleep(&ts, NULL);
 
-    // 生成一个长度为3-18的随机字符串
+    // 生成一个长度为 3-13 的随机字符串
     int name_String_Long = ( rand() % (13 - 3) + 3 );
     char *random_string = generate_random_string(name_String_Long);
 
