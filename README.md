@@ -37,7 +37,7 @@
 # build
 gcc main.c --output main.out
 # run
-./main
+./main.out
 ```
 
 ## 4.碎碎念
